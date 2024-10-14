@@ -253,9 +253,10 @@
         });
 
         function updateCart() {
+            var pizzaInput = parseInt($('#pizzaInput').val());
             if (pizzaInput != 0) {
-                $('#rowcheckout').append(newItem);
                 var newItem = $('<tr id="pizzaRow"><td>Pizza</td><td>' + pizzaInput + '</td><td>' + pricePizza + '</td><td>' +  + '</td></tr>');
+                $('#rowcheckout').append(newItem);
 
             }
             else {
