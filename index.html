@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>UTS | C14230230</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <h1 class="text-2xl text-center font-bold" >Food Menu</h1>
+    <div class="container m-auto my-10 z-10 justify-items-center">
+        <div
+            class="container mx-auto flex-wrap gap-10 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-cols-1 items-center justify-items-center">
+            <div id="pizza" class="card rounded w-60 border-gray-600 border border-opacity-20">
+                <img src="https://bestinau.com.au/wp-content/uploads/2019/01/free-images.jpg"
+                    class="relative  rounded-t-md" alt="" class=" block">
+                <div class="card-body m-5">
+                    <p class="font-bold">Pizza</p>
+                    <div class="flex">
+                        <p>$</p>
+                        <p id="pricePizza">12.99</p>
+                    </div>
+                    <div class="flex mt-2 justify-between">
+                        <div class="input-group flex">
+                            <button type="button"
+                                class="minus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#pizzaInput">-</button>
+                            <input id="pizzaInput" type="text"
+                                class="relative m-0 block flex-auto rounded-e border border-solid border-neutral-200 bg-transparent w-8 text-center"
+                                value="0" aria-label="Total" />
+                            <button type="button"
+                                class="plus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#pizzaInput">+</button>
+                        </div>
+                        <div id="labelPizza"
+                            class="inline-block rounded bg-black px-2 py-2 text-xs font-medium uppercase leading-normal text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="burger" class="card rounded w-60 border-gray-600 border border-opacity-20">
+                <img src="https://bestinau.com.au/wp-content/uploads/2019/01/free-images.jpg"
+                    class="relative  rounded-t-md" alt="" class=" block">
+                <div class="card-body m-5">
+                    <p class="font-bold">Burger</p>
+                    <div class="flex">
+                        <p>$</p>
+                        <p id="priceBurger">8.99</p>
+                    </div>
+
+                    <div class="flex mt-2 justify-between">
+                        <div class="input-group flex">
+                            <button type="button"
+                                class="minus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#burgerInput">-</button>
+                            <input id="burgerInput" type="text"
+                                class="relative m-0 block flex-auto rounded-e border border-solid border-neutral-200 bg-transparent w-8 text-center"
+                                value="0" aria-label="Total" />
+                            <button type="button"
+                                class="plus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#burgerInput">+</button>
+                        </div>
+                        <div id="labelBurger"
+                            class="inline-block rounded bg-black px-2 py-2 text-xs font-medium uppercase leading-normal text-white">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="pecel" class="card rounded w-60 border-gray-600 border border-opacity-20">
+                <img src="https://bestinau.com.au/wp-content/uploads/2019/01/free-images.jpg"
+                    class="relative  rounded-t-md" alt="" class=" block">
+                <div class="card-body m-5">
+                    <p class="font-bold">Pecel</p>
+                    <div class="flex">
+                        <p>$</p>
+                        <p id="pricePecel">2.00</p>
+                    </div>
+                    <div class="flex mt-2 justify-between">
+                        <div class="input-group flex">
+                            <button type="button"
+                                class="minus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#pecelInput">-</button>
+                            <input id="pecelInput" type="text"
+                                class="relative m-0 block flex-auto rounded-e border border-solid border-neutral-200 bg-transparent w-8 text-center"
+                                value="0" aria-label="Total" />
+                            <button type="button"
+                                class="plus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#pecelInput">+</button>
+                        </div>
+                        <div id="labelPecel"
+                            class="inline-block rounded bg-black px-2 py-2 text-xs font-medium uppercase leading-normal text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="jeruk" class="card rounded w-60 border-gray-600 border border-opacity-20">
+                <img src="https://bestinau.com.au/wp-content/uploads/2019/01/free-images.jpg"
+                    class="relative  rounded-t-md" alt="" class=" block">
+                <div class="card-body m-5">
+                    <p class="font-bold">Es Jeruk</p>
+                    <div class="flex">
+                        <p>$</p>
+                        <p id="priceJeruk">1.00</p>
+                    </div>
+
+                    <div class="flex mt-2 justify-between">
+                        <div class="input-group flex">
+                            <button type="button"
+                                class="minus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#jerukInput">-</button>
+                            <input id="jerukInput" type="text"
+                                class="relative m-0 block flex-auto rounded-e border border-solid border-neutral-200 bg-transparent w-8 text-center"
+                                value="0" aria-label="Total" />
+                            <button type="button"
+                                class="plus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#jerukInput">+</button>
+                        </div>
+                        <div id="labelJeruk"
+                            class="inline-block rounded bg-black px-2 py-2 text-xs font-medium uppercase leading-normal text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="teh" class="card rounded w-60 border-gray-600 border border-opacity-20">
+                <img src="https://bestinau.com.au/wp-content/uploads/2019/01/free-images.jpg"
+                    class="relative  rounded-t-md" alt="" class=" block">
+                <div class="card-body m-5">
+                    <p class="font-bold">Es Teh</p>
+                    <div class="flex">
+                        <p>$</p>
+                        <p id="priceTeh">0.99</p>
+                    </div>
+
+                    <div class="flex mt-2 justify-between">
+                        <div class="input-group flex">
+                            <button type="button"
+                                class="minus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#tehInput">-</button>
+                            <input id="tehInput" type="text"
+                                class="relative m-0 block flex-auto rounded-e border border-solid border-neutral-200 bg-transparent w-8 text-center"
+                                value="0" aria-label="Total" />
+                            <button type="button"
+                                class="plus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#tehInput">+</button>
+                        </div>
+                        <div id="labelTeh"
+                            class="inline-block rounded bg-black px-2 py-2 text-xs font-medium uppercase leading-normal text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cao" class="card rounded w-60 border-gray-600 border border-opacity-20">
+                <img src="https://bestinau.com.au/wp-content/uploads/2019/01/free-images.jpg"
+                    class="relative  rounded-t-md" alt="" class=" block">
+                <div class="card-body m-5">
+                    <p class="font-bold">Es Cao</p>
+                    <div class="flex">
+                        <p>$</p>
+                        <p id="priceCao">3.00</p>
+                    </div>
+
+                    <div class="flex mt-2 justify-between">
+                        <div class="input-group flex">
+                            <button type="button"
+                                class="minus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#caoInput">-</button>
+                            <input id="caoInput" type="text"
+                                class="relative m-0 block flex-auto rounded-e border border-solid border-neutral-200 bg-transparent w-8 text-center"
+                                value="0" aria-label="Total" />
+                            <button type="button"
+                                class="plus inline-block rounded bg-neutral-800 px-2 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-neutral-50 shadow-dark-3 transition duration-150 ease-in-out hover:bg-neutral-700 hover:shadow-dark-2 focus:bg-neutral-700 focus:shadow-dark-2 focus:outline-none focus:ring-0 active:bg-neutral-900 active:shadow-dark-2 motion-reduce:transition-none dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
+                                data-target="#caoInput">+</button>
+                        </div>
+                        <div id="labelCao"
+                            class="inline-block rounded bg-black px-2 py-2 text-xs font-medium uppercase leading-normal text-white">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <table id="table" class="table m-5 w-full overflow-auto">
+            <thead>
+                <tr>
+                    <th class="text-start">Food Item</th>
+                    <th class="text-start">Quantity</th>
+                    <th class="text-start">Price</th>
+                    <th class="text-start">Total</th>
+                </tr>
+            </thead>
+            <tbody id="rowcheckout">
+                <tr>
+                    <td>TESSSSSSSSSSSSSSSSSSS</td>
+                    <td>TESSSSSSSSSSSSSSSSSSS</td>
+                    <td>TESSSSSSSSSSSSSSSSSSS</td>
+                    <td>TESSSSSSSSSSSSSSSSSSS</td>
+                </tr>
+            </tbody>
+        </table>
+        <div id="modal"
+            class=" bg-white text-black justify-items-center absolute z-50 w-96 h-auto items-center justify-between">
+            <h2 class="font-bold text-center h-auto">Cart has been ordered</h2>
+            <p id="close">x</p>
+        </div>
+        <p class="font-bold text-end">Grand Total: </p>
+        <button id="checkout" type="submit"
+            class="relative rounded-lg m-0 w-full block flex-auto rounded-e border border-solid border-neutral-200 bg-clip-padding px-3 py-[0.25rem] text-base font-normal leading-[1.6] text-surface outline-none transition duration-200 ease-in-out bg-black text-white my-5">Checkout</button>
+
+    </div>
+</body>
+
+</html>
+
+<script>
+    $(document).ready(function () {
+        $('#modal').hide();
+        var pricePizza = parseFloat($("#pricePizza").text());
+        var priceBurger = parseFloat($("#priceBurger").text());
+        var pricePecel = parseFloat($("#pricePecel").text());
+        var priceJeruk = parseFloat($("#priceJeruk").text());
+        var priceTeh = parseFloat($("#priceTeh").text());
+        var priceCao = parseFloat($("#priceCao").text());
+        var pizzaInput = parseFloat($("#pizzaInput").val());
+
+        $('#pizzaInput, #burgerInput, #pecelInput, #jerukInput, #tehInput, #caoInput').on('keyup change', function () {
+        });
+
+        // Plus sign
+        // Change label
+        // Change tabel
+        $('.plus').click(function () {
+            let target = $($(this).data('target'));
+            let value = parseInt(target.val());
+            target.val(value + 1);
+            initLabel();
+            updateCart();
+        });
+
+        // Minus Sign
+        $('.minus').click(function () {
+            let target = $($(this).data('target'));
+            let value = parseInt(target.val());
+            if (value > 0) {
+                target.val(value - 1);
+            }
+            initLabel();
+            updateCart();
+        });
+
+        function updateCart() {
+            if (pizzaInput != 0) {
+                $('#rowcheckout').append(newItem);
+                var newItem = $('<tr id="pizzaRow"><td>Pizza</td><td>' + pizzaInput + '</td><td>' + pricePizza + '</td><td>' +  + '</td></tr>');
+
+            }
+            else {
+                $("#pizzaRow").remove();
+                $('#rowcheckout').append(newItem);
+                var newItem = $('<tr id="pizzaRow"><td>Pizza</td><td>' + pizzaInput + '</td><td>' + pricePizza + '</td><td>' +  + '</td></tr>');
+            }
+        }
+
+
+        function initLabel(value) {
+            if ($("#pizzaInput") == 0) {
+                $("#labelPizza").html('<p>$'+pricePizza+'</p>');
+            }
+            else {
+                var calcPizza = $(pricePizza) * $(pizzaInput);
+                $("#labelPizza").html('<p>$'+pricePizza+'</p>');
+            }
+            if ($("#burgerInput") == 0) {
+                $("#labelBurger").html('<p>$'+pricePizza+'</p>');
+            }
+            else {
+                var calcBurger = $(priceBurger) * $(burgerInput);
+                $("#labelBurger").html('<p>$'+priceBurger+'</p>');
+            }
+            if ($("#pecelInput") == 0) {
+                $("#labelPecel").html('<p>$'+pricePecel+'</p>');
+            }
+            else {
+                var calcPizza = $(pricePizza) * $(pizzaInput);
+                console.log(calcPizza);
+                $("#labelPecel").html('<p>$'+pricePecel+'</p>');
+            }
+            if ($("#jerukInput") == 0) {
+                $("#labelJeruk").html('<p>$'+priceJeruk+'</p>');
+            }
+            else {
+                var calcPizza = $(pricePizza) * $(pizzaInput);
+                console.log(calcPizza);
+                $("#labelJeruk").html('<p>$'+priceJeruk+'</p>');
+            }
+            if ($("#tehInput") == 0) {
+                $("#labelTeh").html('<p>$'+priceTeh+'</p>');
+            }
+            else {
+                var calcPizza = $(pricePizza) * $(pizzaInput);
+                console.log(calcPizza);
+                $("#labelTeh").html('<p>$'+priceTeh+'</p>');
+            }
+            if ($("#caoInput") == 0) {
+                $("#labelCao").html('<p>$'+priceCao+'</p>');
+            }
+            else {
+                var calcPizza = $(pricePizza) * $(pizzaInput);
+                $("#labelCao").html('<p>$'+priceCao+'</p>');
+            }
+            // $("#labelPizza").text('$'+toString(calcPizza));
+        }
+
+        $('#checkout').click(function () {
+            $('#modal').show();
+        });
+        $('#close').click(function () {
+            $('#modal').hide();
+            $('#table').hide();
+            $("#rowcheckout").empty();
+        });
+
+    });
+</script>
